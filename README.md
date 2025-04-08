@@ -1,13 +1,24 @@
-# My Portfolio
+# My Portfolio – Reflex Web App
 
-This is the **My Portfolio** project, a personal portfolio built using [Reflex](https://reflex.dev/).
+This is my personal portfolio built with [Reflex](https://reflex.dev), a full-stack Python framework for creating modern web apps without writing JavaScript.
 
-## Features
-- **Dark Mode**: A modern dark theme with purple accents.
-- **Responsive Design**: Works seamlessly on desktop and mobile devices.
-- **Contact Form**: A functional contact form for reaching out.
+> 🔗 Live site: [https://juancarlosgarzon.com](https://juancarlosgarzon.com)
 
-## Installation
+---
+
+## 🛠 Tech Stack
+
+- ⚙️ **Reflex v0.7.5** – frontend + backend with Python
+- 🎨 Modern UI with built-in components
+- 🌍 Deployed using **Render.com**
+- 🧾 Source code managed on **GitHub**
+
+---
+
+## 🚀 Local Installation
+
+### ⚙️ With Mamba & Miniforge
+
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/my_portfolio.git
@@ -29,6 +40,8 @@ This is the **My Portfolio** project, a personal portfolio built using [Reflex](
    ```bash
    reflex run
    ```
+   
+💡 Replace reflex-env with any environment name you prefer.
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

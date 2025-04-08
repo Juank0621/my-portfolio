@@ -25,6 +25,11 @@ venv.bak/
 Thumbs.db
 
 assets/external/
-.web
-.states
+.states/
+.web/
 *.db
+frontend.zip
+backend.zip
+*.pyc
+*.log
+.DS_Store
