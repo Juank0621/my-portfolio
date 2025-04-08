@@ -1,5 +1,5 @@
 import reflex as rx
-from .nav import navbar
+from .nav import navbar, footer_three_columns
 
 def base_page(child: rx.Component, hide_navbar: bool = False, *args, **kwargs) -> rx.Component:
     if not isinstance(child, rx.Component):
@@ -18,9 +18,10 @@ def base_page(child: rx.Component, hide_navbar: bool = False, *args, **kwargs) -
             child,
             padding="1em",
             width="100%",
-            bg="linear-gradient(to right, #1a1a1a, #2a2a2a)",  # Fondo negro con tonalidades moradas
+            bg="linear-gradient(to right, #1a1a1a, #2a2a2a)",  
             id="my-content-area",
         ),
+        footer_three_columns(),
         padding="10em",
     )
 

@@ -1,7 +1,7 @@
 import reflex as rx
 from rxconfig import config
 from .ui.base import base_page
-from .ui.nav import about_content, resume_content, contact_content
+from .ui.nav import about_content, resume_content, contact_content, footer_three_columns
 
 class State(rx.State):
     """The app state."""
