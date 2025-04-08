@@ -1,6 +1,6 @@
 # My Portfolio
 
-This is a personal portfolio project built using [Reflex](https://reflex.dev/).
+This is the **My Portfolio** project, a personal portfolio built using [Reflex](https://reflex.dev/).
 
 ## Features
 - **Dark Mode**: A modern dark theme with purple accents.
@@ -14,10 +14,10 @@ This is a personal portfolio project built using [Reflex](https://reflex.dev/).
    cd my_portfolio
    ```
 
-2. Create a virtual environment and activate it:
+2. Create a virtual environment using `mamba` and activate it:
    ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   mamba create -n my_portfolio python=3.10 -y
+   mamba activate my_portfolio
    ```
 
 3. Install dependencies:
