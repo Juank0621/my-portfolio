@@ -2,7 +2,7 @@ import reflex as rx
 
 def navbar_link(text: str, url: str) -> rx.Component:
     return rx.link(
-        rx.text(text, size="4", weight="medium", color="purple.300"),  # Texto morado
+        rx.text(text, size="4", weight="medium", color="purple"),
         href=url,
     )
 
@@ -13,12 +13,20 @@ def navbar() -> rx.Component:
                 rx.link(
                     rx.image(
                         src="/logo.png",
-                        width="8em",  # Reducir el tamaño del logo
+                        width="3em",  
                         height="auto",
                         border_radius="25%",
                     ),
                     href="/",
                 ),
+                rx.text(
+                    "Juan Garzon",
+                    font_size="1.5em",
+                    font_weight="bold",
+                    color="white",
+                    font_family="'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+                ),
+                rx.spacer(),
                 rx.hstack(
                     navbar_link("Home", "/"),
                     navbar_link("About", "/about"),
@@ -28,21 +36,21 @@ def navbar() -> rx.Component:
                 ),
                 rx.hstack(
                     rx.link(
-                        rx.icon(tag="github", color="purple.400"),  # Ícono morado
+                        rx.icon(tag="github", color="purple"),
                         href="https://github.com/Juank0621",
                         is_external=True,
                     ),
                     rx.link(
-                        rx.icon(tag="linkedin", color="purple.400"),  # Ícono morado
+                        rx.icon(tag="linkedin", color="purple"),
                         href="https://www.linkedin.com/in/juancarlosgarzon",
                         is_external=True,
                     ),
-                    rx.color_mode.button(),  # Botón de cambio de modo
-                    spacing="4",  # Espaciado entre los íconos
+                    rx.color_mode.button(bg="purple", color="white"),
+                    spacing="4",
                 ),
-                justify="between",  # Cambiar de 'space-between' a 'between'
+                justify="center",
                 align_items="center",
-                padding_x="2em",  # Añadir padding horizontal
+                padding_x="2em",
                 id="my-navbar-hstack-desktop",
             ),
         ),
@@ -55,35 +63,35 @@ def navbar() -> rx.Component:
                         height="auto",
                         border_radius="25%",
                     ),
-                    rx.heading("Reflex", size="6", weight="bold", color="purple.300"),  # Texto morado
+                    rx.heading("Juan Garzon", size="6", weight="bold", color="purple"),
                     align_items="center",
                 ),
                 rx.menu.root(
-                    rx.menu.trigger(rx.icon("menu", size=30, color="purple.400")),  # Ícono morado
+                    rx.menu.trigger(rx.icon("menu", size=30, color="purple")),
                     rx.menu.content(
                         navbar_link("Home", "/"),
                         navbar_link("About", "/about"),
                         navbar_link("Resume", "/resume"),
                         navbar_link("Contact", "/contact"),
                         rx.link(
-                            rx.icon(tag="github", color="purple.400"),  # Ícono morado
+                            rx.icon(tag="github", color="purple"),
                             href="https://github.com/Juank0621",
                             is_external=True,
                         ),
                         rx.link(
-                            rx.icon(tag="linkedin", color="purple.400"),  # Ícono morado
+                            rx.icon(tag="linkedin", color="purple"),
                             href="https://www.linkedin.com/in/juancarlosgarzon",
                             is_external=True,
                         ),
-                        rx.color_mode.button(),  # Botón de cambio de modo
+                        rx.color_mode.button(color="purple"),
                     ),
                 ),
-                justify="between",  # Cambiar de 'space-between' a 'between'
+                justify="center",
                 align_items="center",
-                padding_x="2em",  # Añadir padding horizontal
+                padding_x="2em",
             ),
         ),
-        bg="#000000",  # Fondo negro
+        bg="#000000",
         padding="1em",
         width="100%",
         id="my-main-navbar",
@@ -91,13 +99,13 @@ def navbar() -> rx.Component:
 
 def about_content() -> rx.Component:
     return rx.box(
-        rx.heading("About", size="5", weight="bold", color="purple.300"),
+        rx.heading("About", size="5", weight="bold", color="purple"),
         rx.text("More personal information will be added here later.", color="white"),
     )
 
 def resume_content() -> rx.Component:
     return rx.box(
-        rx.heading("Resume", size="5", weight="bold", color="purple.300"),
+        rx.heading("Resume", size="5", weight="bold", color="purple"),
         rx.html('''
             <iframe src="/Juan_Carlos_Garzon_Resume.pdf" width="100%" height="600px" style="border:none;"></iframe>
         '''),
@@ -115,17 +123,17 @@ def contact_content() -> rx.Component:
             rx.hstack(
                 rx.image(src="/envelope.png", width="2.5em"),
                 rx.vstack(
-                    rx.heading("Contact Me", color="purple.400"),
+                    rx.heading("Contact Me", color="purple"),
                     rx.text("Feel free to reach out using the form below.", color="white"),
                 ),
                 spacing="4"
             ),
             rx.vstack(
-                rx.text("Name ", rx.text.span("*", color="purple.500")),
+                rx.text("Name ", rx.text.span("*", color="purple")),
                 rx.input(name="name", required=True, bg="#1f1f1f", color="white"),
             ),
             rx.vstack(
-                rx.text("Email ", rx.text.span("*", color="purple.500")),
+                rx.text("Email ", rx.text.span("*", color="purple")),
                 rx.input(name="email", type="email", required=True, bg="#1f1f1f", color="white"),
             ),
             rx.vstack(

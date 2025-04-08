@@ -21,9 +21,6 @@ def base_page(child: rx.Component, hide_navbar: bool = False, *args, **kwargs) -
             bg="linear-gradient(to right, #1a1a1a, #2a2a2a)",  # Fondo negro con tonalidades moradas
             id="my-content-area",
         ),
-        rx.logo(),
-        rx.color_mode.button(position="bottom-left"),
         padding="10em",
-        id="my-base-page-container",
     )
 
