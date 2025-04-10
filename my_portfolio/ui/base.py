@@ -8,7 +8,7 @@ def base_page(child: rx.Component, hide_navbar: bool = False, on_load: rx.Var = 
     if hide_navbar:
         return rx.container(
             child,
-            rx.logo(),
+            #rx.logo(),
             rx.color_mode.button(position="bottom-left"),
         )
 
