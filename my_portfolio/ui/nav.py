@@ -98,18 +98,6 @@ def footer() -> rx.Component:
                 padding_left="5em",
             ),
             rx.box(
-                rx.center(
-                    rx.text(
-                        "contact@juancarlosgarzon.com",
-                        size="5",
-                        color="white",
-                    )
-                ),
-                width=["100%", "33%"],
-                justify="center",
-                align="center",
-            ),
-            rx.box(
                 rx.hstack(
                     rx.link(
                         rx.image(
@@ -161,7 +149,7 @@ def footer() -> rx.Component:
                 width=["100%", "33%"],
                 justify="end",
                 align="center",
-                padding_right="7em",
+                padding_right="10em",
             ),
             direction="row",
             wrap="wrap",

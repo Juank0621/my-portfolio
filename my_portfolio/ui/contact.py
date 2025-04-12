@@ -44,7 +44,7 @@ def contact_content() -> rx.Component:
                         box_shadow="lg",
                         width="400px",
                     ),
-                    spacing="3",
+                    spacing="6",
                     justify="center",
                     wrap="wrap",
                     width="100%",
