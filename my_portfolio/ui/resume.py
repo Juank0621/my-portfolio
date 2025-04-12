@@ -9,7 +9,7 @@ def resume_content() -> rx.Component:
                     <iframe 
                         src="/Juan_Carlos_Garzon_Resume.pdf" 
                         width="100%" 
-                        height="900px" 
+                        height="650px" 
                         style="border: none;"
                     ></iframe>
                 '''),

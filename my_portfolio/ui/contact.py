@@ -56,6 +56,7 @@ def contact_content() -> rx.Component:
             ),
             max_width="1000px",
             width="100%",
+            padding_top="6em",
             padding_bottom="15em",
         ),
         width="100%"

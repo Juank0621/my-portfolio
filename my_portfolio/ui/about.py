@@ -74,5 +74,5 @@ def about_content() -> rx.Component:
         align="center",
         max_width="1300px",
         width="100%",
-        padding="2em",
+        padding="5em",
     )
