@@ -5,29 +5,23 @@ def base_page(child: rx.Component, hide_navbar: bool = False, on_load: rx.Var = 
     if not isinstance(child, rx.Component):
         child = rx.heading("This is not a valid component", size="6", color="red")
 
-    if hide_navbar:
-        return rx.container(
-            child,
-            #rx.logo(),
-            rx.color_mode.button(position="bottom-left"),
-        )
-
     return rx.box(
         rx.flex(
             rx.vstack(
-                navbar(),
+                navbar() if not hide_navbar else None,
                 rx.box(
                     child,
-                    padding="1em",
+                    padding="0",
                     width="100%",
-                    bg="linear-gradient(to right, #1a1a1a, #2a2a2a)",
+                    bg="#1c1c1e", 
                     flex="1",
                 ),
-                footer(),
+                footer() if not hide_navbar else None,
                 spacing="0",
             ),
             direction="column",
-            height="100vh",
         ),
         on_load=on_load,
+        style={"scroll-behavior": "smooth"},
     )
+

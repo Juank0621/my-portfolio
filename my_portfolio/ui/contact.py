@@ -1,56 +1,62 @@
 import reflex as rx
 
-class FormState(rx.State):
-    @rx.event
-    def submit(self, form_data):
-        return rx.toast("Form submitted!")
-
 def contact_content() -> rx.Component:
-    return rx.flex(
-        rx.center(
-            rx.card(
-                rx.form(
-                    rx.hstack(
-                        rx.image(src="/envelope.png", width="2em"),
-                        rx.vstack(
-                            rx.heading("Contact Me", size="5", color="white"),
-                            rx.text("Feel free to reach out using the form below.", color="gray"),
+    return rx.center(
+        rx.box(
+            rx.vstack(
+                rx.heading("Contact", size="8", color="white", text_align="center"),
+                rx.text(
+                    "Feel free to reach out to me",
+                    font_size="1.2em",
+                    color="gray",
+                    margin_top="0.5em",
+                    margin_bottom="2em",
+                    text_align="center"
+                ),
+                rx.hstack(
+                    rx.box(
+                        rx.flex(
+                            rx.image(src="/envelope.svg", width="3em", filter="invert(1)"),
+                            rx.text("contact@juancarlosgarzon.com", color="white", font_size="1em"),
+                            spacing="4",
+                            align="center",
+                            justify="center",
+                            width="100%",
                         ),
-                        spacing="4",
-                        align="center",
+                        padding="1.5em",
+                        bg="linear-gradient(to right, #2e144f, #1f1f2e)",
+                        border_radius="15px",
+                        box_shadow="lg",
+                        width="400px",
                     ),
-                    rx.spacer(height="1em"),
-                    rx.vstack(
-                        rx.text("Name ", rx.text.span("*", color="red")),
-                        rx.input(name="name", required=True, width="100%", bg="#1f1f1f", color="white"),
+                    rx.box(
+                        rx.flex(
+                            rx.image(src="/telephone.svg", width="3em", filter="invert(1)"),
+                            rx.text("+1 (438) 773-4784", color="white", font_size="1em"),
+                            spacing="4",
+                            align="center",
+                            justify="center",
+                            width="100%",
+                        ),
+                        padding="1.5em",
+                        bg="linear-gradient(to right, #2e144f, #1f1f2e)",
+                        border_radius="15px",
+                        box_shadow="lg",
+                        width="400px",
                     ),
-                    rx.spacer(height="1em"),
-                    rx.vstack(
-                        rx.text("Email ", rx.text.span("*", color="red")),
-                        rx.input(name="email", type="email", required=True, width="100%", bg="#1f1f1f", color="white"),
-                    ),
-                    rx.spacer(height="1em"),
-                    rx.vstack(
-                        rx.text("Message"),
-                        rx.text_area(name="message", width="100%", bg="#1f1f1f", color="white", min_height="150px"),
-                    ),
-                    rx.spacer(height="1em"),
-                    rx.button("Send", type="submit", bg="#2e144f", color="white", width="100%", margin_top="1em"),
-                    on_submit=FormState.submit,
-                    spacing="4",
+                    spacing="3",
+                    justify="center",
+                    wrap="wrap",
                     width="100%",
                 ),
+                spacing="4",
+                align="center",
                 width="100%",
-                max_width="600px",
-                padding="2em",
-                bg="linear-gradient(to right, #1f1f2e, #2e144f)",
-                box_shadow="lg",
-                border_radius="lg",
+                padding_y="5em",
             ),
+            max_width="1000px",
             width="100%",
+            padding_bottom="15em",
         ),
-        height="100%",
-        align_items="center",
-        justify_content="center",
-        padding_y="6em",
+        width="100%"
     )
