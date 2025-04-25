@@ -2,7 +2,7 @@
 
 This is my personal portfolio built with [Reflex](https://reflex.dev), a full-stack Python framework for creating modern web apps without writing JavaScript.
 
-🔗 Live site: [https://juancarlosgarzon.com](https://juancarlosgarzon.com)
+🔗 Live site: [https://juancarlosgarzon.com](https://juancarlosgarzon.com) & [https://juangarzon.me](https://juangarzon.me)
 
 ---
 
