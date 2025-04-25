@@ -249,6 +249,6 @@ def footer() -> rx.Component:
         ),
         padding_y="1.5em",
         width="100%",
-        bg="rgba(0, 0, 0, 0.5)",
+        bg="rgba(0, 0, 0, 0.2)",
         backdrop_filter="blur(6px)",
     )
