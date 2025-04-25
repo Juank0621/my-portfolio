@@ -6,6 +6,12 @@ from .ui.resume import resume_content
 from .ui.contact import contact_content
 from .ui.home import home_section
 
+@rx.page(
+    route="/",
+    title="Juan Garzon | AI Portfolio",
+    description="Portfolio of Juan Carlos Garzon - Machine Learning Engineer specialized in AI, CV, and NLP."
+)
+
 def my_portfolio() -> rx.Component:
     return base_page(
         rx.box(
@@ -107,4 +113,4 @@ def my_portfolio() -> rx.Component:
     )
 
 app = rx.App(stylesheets=["/style.css"])
-app.add_page(my_portfolio, route="/")
+

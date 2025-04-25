@@ -153,5 +153,6 @@ def about_content() -> rx.Component:
                 ),
             ),
             width="100%",
+            overflow_x="hidden",
         )
     )
