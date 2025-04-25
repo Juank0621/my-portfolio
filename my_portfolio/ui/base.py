@@ -18,10 +18,14 @@ def base_page(child: rx.Component, hide_navbar: bool = False, on_load: rx.Var = 
                 ),
                 footer() if not hide_navbar else None,
                 spacing="0",
+                align="center",  
+                width="100%",
             ),
             direction="column",
+            align_items="center",  
+            justify="center",
+            width="100%",
         ),
         on_load=on_load,
         style={"scroll-behavior": "smooth"},
     )
-

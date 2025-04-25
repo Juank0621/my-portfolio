@@ -12,8 +12,6 @@ def my_portfolio() -> rx.Component:
             rx.vstack(
                 # HOME SECTION
                 home_section(),
-
-                # Typed.js para efecto de escritura
                 rx.script(src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"),
                 rx.script(
                     """
@@ -36,14 +34,11 @@ def my_portfolio() -> rx.Component:
                     }, 500);
                     """
                 ),
-
-                # Script de animaciones para todas las secciones
                 rx.script(
                     """
                     if (!window._observerSetupDone) {
                         window._observerSetupDone = true;
-
-                        // Establece el dataset con la clase original
+                        
                         document.querySelectorAll('.slide-in-left').forEach(el => el.dataset.animateClass = 'slide-in-left');
                         document.querySelectorAll('.slide-in-right').forEach(el => el.dataset.animateClass = 'slide-in-right');
                         document.querySelectorAll('.slide-in-bottom').forEach(el => el.dataset.animateClass = 'slide-in-bottom');
@@ -87,7 +82,7 @@ def my_portfolio() -> rx.Component:
                 rx.center(
                     rx.box(
                         resume_content(),
-                        max_width="1200px",
+                        max_width="1500px",
                         width="100%",
                         padding_top="5em",
                     ),
@@ -99,7 +94,7 @@ def my_portfolio() -> rx.Component:
                 rx.center(
                     rx.box(
                         contact_content(),
-                        max_width="1200px",
+                        max_width="1500px",
                         width="100%",
                         padding_top="5em",
                     ),

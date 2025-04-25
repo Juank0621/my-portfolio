@@ -8,7 +8,7 @@ def contact_content() -> rx.Component:
                 rx.text(
                     "Feel free to reach out to me",
                     font_size="1.2em",
-                    color="gray",
+                    color="white",
                     margin_top="0.5em",
                     margin_bottom="2em",
                     text_align="center"
@@ -17,7 +17,7 @@ def contact_content() -> rx.Component:
                     rx.box(
                         rx.flex(
                             rx.image(src="/envelope.svg", width="3em", filter="invert(1)"),
-                            rx.text("contact@juancarlosgarzon.com", color="white", font_size="1em"),
+                            rx.text("hello@juangarzon.me", color="white", font_size="1em"),
                             spacing="4",
                             align="center",
                             justify="center",
@@ -27,7 +27,7 @@ def contact_content() -> rx.Component:
                         bg="linear-gradient(to right, #2e144f, #1f1f2e)",
                         border_radius="15px",
                         box_shadow="lg",
-                        width="400px",
+                        width=["80%", "400px"],
                     ),
                     rx.box(
                         rx.flex(
@@ -42,7 +42,7 @@ def contact_content() -> rx.Component:
                         bg="linear-gradient(to right, #2e144f, #1f1f2e)",
                         border_radius="15px",
                         box_shadow="lg",
-                        width="400px",
+                        width=["80%", "400px"],
                     ),
                     spacing="6",
                     justify="center",

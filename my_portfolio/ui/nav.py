@@ -60,7 +60,39 @@ def navbar() -> rx.Component:
                 align_items="center",
                 width="100%",
                 padding_x="4em",
-            ),
+            )
+        ),
+        rx.mobile_and_tablet(
+            rx.hstack(
+                rx.box(
+                    rx.link(
+                        rx.image(
+                            src="/logo.png",
+                            width="10em",
+                            height="auto",
+                            border_radius="25%",
+                            cursor="pointer",
+                            on_click=rx.scroll_to("home"),
+                        ),
+                    ),
+                    padding_left="2em",
+                ),
+                rx.menu.root(
+                    rx.menu.trigger(
+                        rx.icon("menu", size=30),
+                    ),
+                    rx.menu.content(
+                        rx.menu.item("Home", on_select=rx.scroll_to("home")),
+                        rx.menu.item("About Me", on_select=rx.scroll_to("about")),
+                        rx.menu.item("Resume", on_select=rx.scroll_to("resume")),
+                        rx.menu.item("Contact", on_select=rx.scroll_to("contact")),
+                    ),
+                ),
+                justify="between",
+                align_items="center",
+                width="100%",
+                padding_x="1em",
+            )
         ),
         bg="rgba(0, 0, 0, 0.2)",
         backdrop_filter="blur(6px)",
@@ -73,93 +105,150 @@ def navbar() -> rx.Component:
 
 def footer() -> rx.Component:
     return rx.el.footer(
-        rx.flex(
-            rx.box(
-                rx.hstack(
-                    rx.image(
-                        src="/icon.png",
-                        width="3em",
-                        height="auto",
-                        border_radius="25%",
+        rx.fragment(
+            rx.desktop_only(
+                rx.flex(
+                    rx.box(
+                        rx.hstack(
+                            rx.image(
+                                src="/icon.png",
+                                width="3em",
+                                height="auto",
+                                border_radius="25%",
+                            ),
+                            rx.text(
+                                "© 2025 Juan Carlos Garzon. All rights reserved.",
+                                size="3",
+                                white_space="nowrap",
+                                weight="medium",
+                                color="white",
+                            ),
+                            spacing="2",
+                            align="center",
+                        ),
+                        width=["100%", "33%"],
+                        justify="start",
+                        align="center",
+                        padding_left="5em",
                     ),
-                    rx.text(
-                        "© 2025 Juan Carlos Garzon. All rights reserved.",
-                        size="3",
-                        white_space="nowrap",
-                        weight="medium",
-                        color="white",
+                    rx.box(
+                        rx.hstack(
+                            rx.link(
+                                rx.image(
+                                    src="/GitHub.svg",
+                                    width="2em",
+                                    height="2em",
+                                    _hover={"filter": "grayscale(100%)"},
+                                ),
+                                href="https://github.com/Juank0621",
+                                is_external=True,
+                            ),
+                            rx.link(
+                                rx.image(
+                                    src="/LinkedIn.svg",
+                                    width="1.8em",
+                                    height="1.8em",
+                                    _hover={"filter": "grayscale(100%)"},
+                                    filter="none",
+                                ),
+                                href="https://www.linkedin.com/in/juancarlosgarzon",
+                                is_external=True,
+                            ),
+                            rx.link(
+                                rx.image(
+                                    src="/Instagram.svg",
+                                    width="1.8em",
+                                    height="1.8em",
+                                    _hover={"filter": "grayscale(100%)"},
+                                    filter="none",
+                                ),
+                                href="https://www.instagram.com/juank920621",
+                                is_external=True,
+                            ),
+                            rx.link(
+                                rx.image(
+                                    src="/Kaggle.svg",
+                                    width="1.8em",
+                                    height="1.8em",
+                                    _hover={"filter": "grayscale(100%)"},
+                                    filter="none",
+                                ),
+                                href="https://www.kaggle.com/juancarlosgarzon",
+                                is_external=True,
+                            ),
+                            spacing="4",
+                            justify="end",
+                            align="center",
+                        ),
+                        width=["100%", "33%"],
+                        justify="end",
+                        align="center",
+                        padding_right="10em",
+                    ),
+                    direction="row",
+                    wrap="wrap",
+                    justify="between",
+                    align="center",
+                    width="100%",
+                    padding_x="0",
+                )
+            ),
+            rx.mobile_and_tablet(
+                rx.vstack(
+                    rx.hstack(
+                        rx.image(
+                            src="/icon.png",
+                            width="2em",
+                            height="auto",
+                            border_radius="25%",
+                        ),
+                        rx.text(
+                            "© 2025 Juan Carlos Garzon. All rights reserved.",
+                            size="2",
+                            weight="medium",
+                            color="white",
+                            text_align="center",
+                        ),
+                        spacing="2",
+                        align="center",
+                        justify="center",
+                        width="100%",
+                    ),
+                    rx.hstack(
+                        rx.link(
+                            rx.image(src="/GitHub.svg", width="1.5em", height="1.5em"),
+                            href="https://github.com/Juank0621",
+                            is_external=True,
+                        ),
+                        rx.link(
+                            rx.image(src="/LinkedIn.svg", width="1.4em", height="1.4em"),
+                            href="https://www.linkedin.com/in/juancarlosgarzon",
+                            is_external=True,
+                        ),
+                        rx.link(
+                            rx.image(src="/Instagram.svg", width="1.4em", height="1.4em"),
+                            href="https://www.instagram.com/juank920621",
+                            is_external=True,
+                        ),
+                        rx.link(
+                            rx.image(src="/Kaggle.svg", width="1.4em", height="1.4em"),
+                            href="https://www.kaggle.com/juancarlosgarzon",
+                            is_external=True,
+                        ),
+                        spacing="3",
+                        justify="center",
+                        align="center",
+                        wrap="wrap",
+                        padding_top="0.5em",
                     ),
                     spacing="2",
                     align="center",
-                ),
-                width=["100%", "33%"],
-                justify="start",
-                align="center",
-                padding_left="5em",
+                    width="100%",
+                )
             ),
-            rx.box(
-                rx.hstack(
-                    rx.link(
-                        rx.image(
-                            src="/GitHub.svg",
-                            width="2em",
-                            height="2em",
-                            _hover={"filter": "grayscale(100%)"},
-                        ),
-                        href="https://github.com/Juank0621",
-                        is_external=True,
-                    ),
-                    rx.link(
-                        rx.image(
-                            src="/LinkedIn.svg",
-                            width="1.8em",
-                            height="1.8em",
-                            _hover={"filter": "grayscale(100%)"},
-                            filter="none",
-                        ),
-                        href="https://www.linkedin.com/in/juancarlosgarzon",
-                        is_external=True,
-                    ),
-                    rx.link(
-                        rx.image(
-                            src="/Instagram.svg",
-                            width="1.8em",
-                            height="1.8em",
-                            _hover={"filter": "grayscale(100%)"},
-                            filter="none",
-                        ),
-                        href="https://www.instagram.com/juank920621",
-                        is_external=True,
-                    ),
-                    rx.link(
-                        rx.image(
-                            src="/Kaggle.svg",
-                            width="1.8em",
-                            height="1.8em",
-                            _hover={"filter": "grayscale(100%)"},
-                            filter="none",
-                        ),
-                        href="https://www.kaggle.com/juancarlosgarzon",
-                        is_external=True,
-                    ),
-                    spacing="4",
-                    justify="end",
-                    align="center",
-                ),
-                width=["100%", "33%"],
-                justify="end",
-                align="center",
-                padding_right="10em",
-            ),
-            direction="row",
-            wrap="wrap",
-            justify="between",
-            align="center",
-            width="100%",
-            padding_x="0",
         ),
         padding_y="1.5em",
         width="100%",
-        bg="rgba(0, 0, 0, 0.01)",
+        bg="rgba(0, 0, 0, 0.5)",
         backdrop_filter="blur(6px)",
     )
