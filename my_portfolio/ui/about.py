@@ -4,8 +4,6 @@ def about_content() -> rx.Component:
     return rx.center(
         rx.box(
             rx.fragment(
-
-                # Desktop view
                 rx.desktop_only(
                     rx.hstack(
                         rx.box(
@@ -29,7 +27,13 @@ def about_content() -> rx.Component:
                         ),
                         rx.box(
                             rx.vstack(
-                                rx.heading("About Me", size="8", weight="bold", color="white", class_name="slide-in-right"),
+                                rx.heading(
+                                    "About Me", 
+                                    size="8", 
+                                    weight="bold", 
+                                    color="white", 
+                                    class_name="slide-in-right"
+                                ),
                                 rx.text(
                                     "Computer Engineer with 5 years of experience in Data Analysis within the Colombian Aerospace Force and 2 years in Artificial Intelligence. "
                                     "Specializing in Computer Vision, Real-Time Object Detection, and NLP using Transformers and LLMs. Experienced in developing and deploying "
@@ -50,7 +54,7 @@ def about_content() -> rx.Component:
                                     font_weight="bold",
                                     color="white",
                                     margin_top="2em",
-                                    class_name="slide-in-right"
+                                    class_name="slide-in-right",
                                 ),
                                 rx.spacer(height="1em"),
                                 rx.hstack(
@@ -86,8 +90,6 @@ def about_content() -> rx.Component:
                         padding="8em",
                     )
                 ),
-
-                # Mobile / Tablet view
                 rx.mobile_and_tablet(
                     rx.vstack(
                         rx.image(
@@ -98,9 +100,15 @@ def about_content() -> rx.Component:
                             object_position="center",
                             object_fit="cover",
                             box_shadow="lg",
-                            class_name="slide-in-left",
                         ),
-                        rx.heading("About Me", size="6", weight="bold", color="white", class_name="slide-in-right", margin_top="1.5em"),
+                        rx.heading(
+                            "About Me", 
+                            size="6", 
+                            weight="bold", 
+                            color="white", 
+                            margin_top="1.5em",
+                            text_align="center"
+                        ),
                         rx.text(
                             "Computer Engineer with 5 years of experience in Data Analysis within the Colombian Aerospace Force and 2 years in Artificial Intelligence. "
                             "Specializing in Computer Vision, Real-Time Object Detection, and NLP using Transformers and LLMs. Experienced in developing and deploying "
@@ -113,7 +121,6 @@ def about_content() -> rx.Component:
                             line_height="1.8",
                             text_align="justify",
                             margin_top="1em",
-                            class_name="slide-in-right",
                         ),
                         rx.text(
                             "Languages, Frameworks & Tools",
@@ -121,7 +128,7 @@ def about_content() -> rx.Component:
                             font_weight="bold",
                             color="white",
                             margin_top="2em",
-                            class_name="slide-in-right"
+                            text_align="center"
                         ),
                         rx.spacer(height="1em"),
                         rx.hstack(
@@ -129,7 +136,6 @@ def about_content() -> rx.Component:
                                 rx.image(
                                     src=icon,
                                     width="3em",
-                                    class_name="slide-in-bottom",
                                     filter="invert(1)" if "GitHub2" in icon or "GithubCopilot" in icon else None,
                                     _hover={"filter": "grayscale(100%)"}
                                 )
