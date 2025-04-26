@@ -137,7 +137,7 @@ def home_section() -> rx.Component:
                     align="start",
                     justify="start",
                     padding_x="2em",
-                    padding_top="12em",
+                    padding_top="14em",
                     width="100%",
                 ),
                 width="100%",
