@@ -45,7 +45,8 @@ def home_section() -> rx.Component:
                             *[
                                 rx.link(
                                     rx.flex(
-                                        rx.image(src=icon, width="2.5em", height="2.5em", _hover={"filter": "grayscale(100%)"}),
+                                        rx.image(src=icon, width="2.5em", height="2.5em", style={"filter": "invert(1)"} if "GitHub" in icon else {},),
+                                        _hover={"filter": "grayscale(100%)"},
                                         align="center",
                                         justify="center",
                                     ),
@@ -53,7 +54,7 @@ def home_section() -> rx.Component:
                                     is_external=True,
                                 )
                                 for icon, link in [
-                                    ("/GitHub.svg", "https://github.com/Juank0621"),
+                                    ("/GitHub2.svg", "https://github.com/Juank0621"),
                                     ("/LinkedIn.svg", "https://www.linkedin.com/in/juancarlosgarzon"),
                                     ("/Instagram.svg", "https://www.instagram.com/juank920621"),
                                     ("/Kaggle.svg", "https://www.kaggle.com/juancarlosgarzon"),
@@ -115,12 +116,12 @@ def home_section() -> rx.Component:
                     rx.hstack(
                         *[
                             rx.link(
-                                rx.image(src=icon, width="1.6em", height="1.6em"),
+                                rx.image(src=icon, width="1.6em", height="1.6em", style={"filter": "invert(1)"} if "GitHub2" in icon else {},),
                                 href=link,
                                 is_external=True,
                             )
                             for icon, link in [
-                                ("/GitHub.svg", "https://github.com/Juank0621"),
+                                ("/GitHub2.svg", "https://github.com/Juank0621"),
                                 ("/LinkedIn.svg", "https://www.linkedin.com/in/juancarlosgarzon"),
                                 ("/Instagram.svg", "https://www.instagram.com/juank920621"),
                                 ("/Kaggle.svg", "https://www.kaggle.com/juancarlosgarzon"),
@@ -136,7 +137,7 @@ def home_section() -> rx.Component:
                     align="start",
                     justify="start",
                     padding_x="2em",
-                    padding_top="10em",
+                    padding_top="12em",
                     width="100%",
                 ),
                 width="100%",

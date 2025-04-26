@@ -122,7 +122,7 @@ def footer() -> rx.Component:
                                 weight="medium",
                                 color="white",
                             ),
-                            spacing="2",
+                            spacing="5",
                             align="center",
                         ),
                         width=["100%", "33%"],
@@ -134,10 +134,11 @@ def footer() -> rx.Component:
                         rx.hstack(
                             rx.link(
                                 rx.image(
-                                    src="/GitHub.svg",
+                                    src="/GitHub2.svg",
                                     width="2em",
                                     height="2em",
-                                    _hover={"filter": "grayscale(100%)"},
+                                    style={"filter": "invert(1)"}, 
+                                    _hover={"filter": "grayscale(100%)"}, 
                                 ),
                                 href="https://github.com/Juank0621",
                                 is_external=True,
@@ -212,7 +213,10 @@ def footer() -> rx.Component:
                     ),
                     rx.hstack(
                         rx.link(
-                            rx.image(src="/GitHub.svg", width="1.5em", height="1.5em"),
+                            rx.image(src="/GitHub2.svg", width="1.5em", height="1.5em",
+                                     style={"filter": "invert(1)"}, 
+                                    _hover={"filter": "grayscale(100%)"},        
+                            ),
                             href="https://github.com/Juank0621",
                             is_external=True,
                         ),

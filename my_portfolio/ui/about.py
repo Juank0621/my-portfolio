@@ -63,7 +63,7 @@ def about_content() -> rx.Component:
                                             src=icon,
                                             width="3em",
                                             class_name="slide-in-bottom",
-                                            filter="invert(1)" if "GitHub2" in icon or "GithubCopilot" in icon else None,
+                                            filter="invert(1)" if "GitHub2" in icon else None,
                                             _hover={"filter": "grayscale(100%)"}
                                         )
                                         for icon in [
@@ -87,7 +87,7 @@ def about_content() -> rx.Component:
                         align="center",
                         max_width="1500px",
                         width="100%",
-                        padding="8em",
+                        padding="6em",
                     )
                 ),
                 rx.mobile_and_tablet(
