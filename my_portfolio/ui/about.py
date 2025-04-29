@@ -8,7 +8,7 @@ def about_content() -> rx.Component:
                     rx.hstack(
                         rx.box(
                             rx.image(
-                                src="/profile.png",
+                                src="/profile.jpg",
                                 width="24em",
                                 height="24em",
                                 border_radius="100%",
