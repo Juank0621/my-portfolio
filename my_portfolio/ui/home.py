@@ -11,8 +11,9 @@ def home_section() -> rx.Component:
                             rx.text("👋", font_size="2em", class_name="wave-hand"),
                             rx.text("I'm", font_size="2em", color="white", class_name="slide-in-left"),
                             spacing="1",
+                            width="100%",
+                            margin_bottom="2em",
                         ),
-                        rx.box(height="1em"),
                         rx.link(
                             rx.heading(
                                 "Juan Garzon",
@@ -33,19 +34,19 @@ def home_section() -> rx.Component:
                         rx.html(
                             '<span id="typed-role" style="font-size: 2em; font-weight: bold; color: #7c3aed; font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;"></span>'
                         ),
-                        rx.box(height="0.3em"),
                         rx.text(
                             "2 Years of Experience",
                             font_size="1.5em",
                             color="white",
                             text_align="left",
                             class_name="slide-in-left",
+                            margin_top="0.5em",
                         ),
                         rx.hstack(
                             *[
                                 rx.link(
                                     rx.flex(
-                                        rx.image(src=icon, width="2.5em", height="2.5em", style={"filter": "invert(1)"} if "GitHub" in icon else {},),
+                                        rx.image(src=icon, width="2.5em", height="2.5em",),
                                         _hover={"filter": "grayscale(100%)"},
                                         align="center",
                                         justify="center",
@@ -54,7 +55,7 @@ def home_section() -> rx.Component:
                                     is_external=True,
                                 )
                                 for icon, link in [
-                                    ("/GitHub2.svg", "https://github.com/Juank0621"),
+                                    ("/GitHub.svg", "https://github.com/Juank0621"),
                                     ("/LinkedIn.svg", "https://www.linkedin.com/in/juancarlosgarzon"),
                                     ("/Instagram.svg", "https://www.instagram.com/juank920621"),
                                     ("/Kaggle.svg", "https://www.kaggle.com/juancarlosgarzon"),
@@ -62,7 +63,7 @@ def home_section() -> rx.Component:
                             ],
                             spacing="5",
                             align="center",
-                            padding_top="1em",
+                            margin_top="0.5em",
                             class_name="slide-in-left",
                         ),
                         align="start",
@@ -87,6 +88,7 @@ def home_section() -> rx.Component:
                         spacing="1",
                         width="100%",
                         justify="start",
+                        margin_bottom="0.5em",
                     ),
                     rx.heading(
                         "Juan Garzon",
@@ -99,16 +101,16 @@ def home_section() -> rx.Component:
                         width="100%",
                     ),
                     rx.text(
-                        "Machine Learning Engineer",
-                        font_size="1.3em",
+                        "AI Developer | Computer Vision Engineer | Data Scientist",
+                        font_size="1.1em",
                         font_weight="bold",
                         color="#7c3aed",
                         width="100%",
-                        padding_top="0.5em",
+                        margin_top="0.5em",
                     ),
                     rx.text(
                         "2 Years of Experience",
-                        font_size="1.2em",
+                        font_size="1em",
                         color="white",
                         text_align="left",
                         width="100%",
@@ -116,12 +118,12 @@ def home_section() -> rx.Component:
                     rx.hstack(
                         *[
                             rx.link(
-                                rx.image(src=icon, width="1.6em", height="1.6em", style={"filter": "invert(1)"} if "GitHub2" in icon else {},),
+                                rx.image(src=icon, width="1.6em", height="1.6em",),
                                 href=link,
                                 is_external=True,
                             )
                             for icon, link in [
-                                ("/GitHub2.svg", "https://github.com/Juank0621"),
+                                ("/GitHub.svg", "https://github.com/Juank0621"),
                                 ("/LinkedIn.svg", "https://www.linkedin.com/in/juancarlosgarzon"),
                                 ("/Instagram.svg", "https://www.instagram.com/juank920621"),
                                 ("/Kaggle.svg", "https://www.kaggle.com/juancarlosgarzon"),

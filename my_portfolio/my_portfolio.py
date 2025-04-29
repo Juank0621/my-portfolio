@@ -9,7 +9,7 @@ from .ui.home import home_section
 @rx.page(
     route="/",
     title="Juan Garzon | AI Portfolio",
-    description="Portfolio of Juan Carlos Garzon - Machine Learning Engineer specialized in AI, CV, and NLP."
+    description="Portfolio of Juan Carlos Garzon, AI Developer and Computer Vision Engineer.",
 )
 
 def my_portfolio() -> rx.Component:
@@ -25,9 +25,9 @@ def my_portfolio() -> rx.Component:
                         if (window.Typed) {
                             new Typed("#typed-role", {
                                 strings: [
+                                    "AI Developer",
                                     "Machine Learning Engineer",
                                     "Computer Vision Engineer",
-                                    "AI Developer",
                                     "Data Scientist"
                                 ],
                                 typeSpeed: 80,

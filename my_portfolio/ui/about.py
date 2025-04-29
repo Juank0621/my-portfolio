@@ -63,14 +63,13 @@ def about_content() -> rx.Component:
                                             src=icon,
                                             width="3em",
                                             class_name="slide-in-bottom",
-                                            filter="invert(1)" if "GitHub2" in icon else None,
                                             _hover={"filter": "grayscale(100%)"}
                                         )
                                         for icon in [
                                             "/Python.svg", "/FastAPI.svg",
                                             "/scikit-learn.svg", "/TensorFlow.svg", "/PyTorch.svg", "/HF.svg",
                                             "/MongoDB.svg", "/PostgreSQL.svg", "/Langchain.svg", "/Llamaindex.svg",
-                                            "/Colab.svg", "/VSCode.svg", "/Ubuntu.svg", "/Git.svg", "/GitHub2.svg",
+                                            "/Colab.svg", "/VSCode.svg", "/Ubuntu.svg", "/Git.svg",
                                             "/Jira.svg", "/GoogleCloud.svg", "/AWS.svg"
                                         ]
                                     ],
@@ -136,14 +135,13 @@ def about_content() -> rx.Component:
                                 rx.image(
                                     src=icon,
                                     width="3em",
-                                    filter="invert(1)" if "GitHub2" in icon or "GithubCopilot" in icon else None,
                                     _hover={"filter": "grayscale(100%)"}
                                 )
                                 for icon in [
                                     "/Python.svg", "/FastAPI.svg",
                                     "/scikit-learn.svg", "/TensorFlow.svg", "/PyTorch.svg", "/HF.svg",
                                     "/MongoDB.svg", "/PostgreSQL.svg", "/Langchain.svg", "/Llamaindex.svg",
-                                    "/Colab.svg", "/VSCode.svg", "/Ubuntu.svg", "/Git.svg", "/GitHub2.svg",
+                                    "/Colab.svg", "/VSCode.svg", "/Ubuntu.svg", "/Git.svg",
                                     "/Jira.svg", "/GoogleCloud.svg", "/AWS.svg"
                                 ]
                             ],
