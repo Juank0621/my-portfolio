@@ -32,15 +32,13 @@ def navbar() -> rx.Component:
         rx.desktop_only(
             rx.hstack(
                 rx.box(
-                    rx.link(
-                        rx.image(
-                            src="/logo.png",
-                            width="18em",
-                            height="auto",
-                            border_radius="25%",
-                            cursor="pointer",
-                            on_click=rx.scroll_to("home"),
-                        ),
+                    rx.image(
+                        src="/logo.png",
+                        width="18em",
+                        height="auto",
+                        border_radius="25%",
+                        cursor="pointer",
+                        on_click=rx.scroll_to("home"),
                     ),
                     width="20%",
                 ),
