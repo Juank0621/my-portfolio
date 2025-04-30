@@ -92,7 +92,7 @@ def about_content() -> rx.Component:
                 rx.mobile_and_tablet(
                     rx.vstack(
                         rx.image(
-                            src="/profile.png",
+                            src="/profile.jpg",
                             width="16em",
                             height="16em",
                             border_radius="100%",

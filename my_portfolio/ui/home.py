@@ -101,7 +101,7 @@ def home_section() -> rx.Component:
                         width="100%",
                     ),
                     rx.text(
-                        "AI Developer | Computer Vision Engineer | Data Scientist",
+                        "Computer Vision Engineer | AI Developer | Data Scientist",
                         font_size="1.1em",
                         font_weight="bold",
                         color="#7c3aed",

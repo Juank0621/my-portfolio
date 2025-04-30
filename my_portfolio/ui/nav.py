@@ -16,7 +16,7 @@ def navbar_link(text: str, section_id: str, is_active: bool = False) -> rx.Compo
             "bottom": "0",
             "width": "100%" if is_active else "0%",
             "height": "3px",
-            "background": "purple",
+            "background": "#7c3aed",
             "transition": "width 0.4s ease-in-out",
         },
         _hover={

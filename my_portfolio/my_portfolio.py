@@ -71,7 +71,6 @@ def my_portfolio() -> rx.Component:
                     }
                     """
                 ),
-
                 # ABOUT SECTION
                 rx.center(
                     rx.box(
@@ -83,7 +82,6 @@ def my_portfolio() -> rx.Component:
                     id="about",
                     width="100%",
                 ),
-
                 # RESUME SECTION
                 rx.center(
                     rx.box(
@@ -95,7 +93,6 @@ def my_portfolio() -> rx.Component:
                     id="resume",
                     width="100%",
                 ),
-
                 # CONTACT SECTION
                 rx.center(
                     rx.box(
