@@ -134,7 +134,7 @@ def about_content() -> rx.Component:
                             *[
                                 rx.image(
                                     src=icon,
-                                    width="3em",
+                                    width="2em",
                                     _hover={"filter": "grayscale(100%)"}
                                 )
                                 for icon in [

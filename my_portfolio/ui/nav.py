@@ -63,15 +63,13 @@ def navbar() -> rx.Component:
         rx.mobile_and_tablet(
             rx.hstack(
                 rx.box(
-                    rx.link(
-                        rx.image(
-                            src="/logo.png",
-                            width="10em",
-                            height="auto",
-                            border_radius="25%",
-                            cursor="pointer",
-                            on_click=rx.scroll_to("home"),
-                        ),
+                    rx.image(
+                        src="/logo.png",
+                        width="10em",
+                        height="auto",
+                        border_radius="25%",
+                        cursor="pointer",
+                        on_click=rx.scroll_to("home"),
                     ),
                 ),
                 rx.menu.root(
