@@ -10,7 +10,7 @@ def resume_content() -> rx.Component:
                     rx.box(
                         rx.html('''
                             <iframe 
-                                src="/Juan_Carlos_Garzon_Resume.pdf" 
+                                src="/Juan_Carlos_Garzon_Resume_en.pdf" 
                                 width="100%" 
                                 style="border: none; height: 1000px;"
                                 loading="lazy"
@@ -25,7 +25,7 @@ def resume_content() -> rx.Component:
                     rx.box(
                         rx.html('''
                             <iframe 
-                                src="/Juan_Carlos_Garzon_Resume.pdf" 
+                                src="/Juan_Carlos_Garzon_Resume_en.pdf" 
                                 width="100%" 
                                 style="border: none; height: 500px;"
                                 loading="lazy"
@@ -52,7 +52,7 @@ def resume_content() -> rx.Component:
                             },
                             transition="all 0.3s ease-in-out",
                         ),
-                        href="/Juan_Carlos_Garzon_Resume.pdf",
+                        href="/Juan_Carlos_Garzon_Resume_en.pdf",
                         is_external=True,
                         download=True,
                     ),

@@ -17,7 +17,7 @@ def contact_content() -> rx.Component:
                     rx.box(
                         rx.flex(
                             rx.image(src="/envelope.svg", width="3em", filter="invert(1)"),
-                            rx.text("hello@juangarzon.me", color="white", font_size="1em"),
+                            rx.text("hi@juangarzon.me", color="white", font_size="1em"),
                             spacing="4",
                             align="center",
                             justify="center",
