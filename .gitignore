@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
+*.pyc
+
+# Virtual environments
 *.env
 *.venv
 env/
@@ -24,12 +27,10 @@ venv.bak/
 .DS_Store
 Thumbs.db
 
-assets/external/
+# Project-specific files
 .states/
 .web/
 *.db
+assets/external/
 frontend.zip
 backend.zip
-*.pyc
-*.log
-.DS_Store

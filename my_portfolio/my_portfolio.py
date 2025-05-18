@@ -8,7 +8,7 @@ from .ui.home import home_section
 
 @rx.page(
     route="/",
-    title="Juan Garzon | AI Portfolio",
+    title="AI Developer",
     description="Portfolio of Juan Carlos Garzon, AI Developer and Computer Vision Engineer.",
 )
 
@@ -111,3 +111,4 @@ def my_portfolio() -> rx.Component:
 
 app = rx.App(stylesheets=["/style.css"])
 
+### source /home/juangarzon/uv/envs/portfolio/bin/activate
